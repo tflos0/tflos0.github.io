@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>jy2hands</title>
+    <style>
+        .swiper-container {
+            /* width: 685px; */
+            width: 92.1%;
+            height: 575px;
+            margin: auto;
+            position: absolute;
+            top: calc(50% - 282.5px);
+            left: 10px;
+            /* border: tan 2px solid; */
+        }
+
+        .swiper-container-goods {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            margin: auto;
+            background-color: #EFDFB4;
+            position: absolute;
+            top: 0px;
+            /* padding-top: 25px; */
+
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* background-color: #C8C9C9; */
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+            /* background-color: #EFDFB4; */
+            border-radius: 5%;
+
+
+        }
+
+        .card {
+            border: 0px;
+            background-color: #EFDFB4;
+            background-color: unset;
+
+
+        }
+
+        .card img {
+            width: 150px;
+            margin: auto;
+        }
+
+        /* ****************************** */
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            width: 100%;
+            background: #727171;
+            font-family: SimSun, Helvetica, Arial, sans-serif;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            font-size: 18pt;
+
+        }
+
+        .a {
+            text-decoration: none;
+        }
+
+        .arc {
+            border-radius: 5%;
+            box-shadow: 5px 5px 5px 0 gray;
+        }
+
+        iframe {
+            border-radius: 5%;
+            box-shadow: 5px 5px 5px 0 gray;
+
+        }
+
+        span {
+            text-align: center;
+        }
+
+        .main {
+            background-image: url("./img/bg-main00.jpg");
+            background-size: cover;
+            /* background-size: 100%; */
+            margin: auto;
+        }
+
+        .bg {
+            background-image: url("./img/bg-bg02.jpg");
+            width: 100%;
+            background-size: cover;
+
+        }
+
+        /* .btn-primary{} */
+        .ul-g {
+            position: relative;
+        }
+
+        ul {
+            width: 200px;
+            height: 30vh;
+            margin: 0px;
+            padding: 0px;
+            /* padding-right: 40px; */
+            background-color: oldlace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            top: -150px;
+            right: -1000vw;
+            border-radius: 5%;
+            box-shadow: 5px 5px 5px 0 gray;
+            border: lightgray 3px solid;
+
+        }
+
+        ul li {
+            list-style: none;
+            width: 200px;
+            /* padding: 10px; */
+            text-align: center;
+            /* margin-left: 10px; */
+            background-color: oldlaceed;
+            position: relative;
+            margin: auto;
+            text-decoration: none;
+        }
+
+        .nav-g:hover {
+            border: orangered 3px solid;
+            transition: 0.5s;
+
+        }
+
+        .nav-g:hover ul {
+
+            right: 30px;
+            transition: 0.8s;
+
+        }
+
+        .nav-g ul li:hover {
+            background-color: #EAB8B5;
+            transition: 0.5s;
+
+        }
+
+        .nav-g:hover .bar02 {
+            background-color: red;
+
+            transform: translateY(4px) rotate(-30deg);
+
+            transition-duration: 0.5s, 0.5s;
+
+        }
+
+        .nav-g:hover .bar03 {
+            background-color: red;
+            transform: rotate(-30deg);
+            transform: translateX(2px);
+            transition-duration: 0.5s, 0.5s;
+
+        }
+
+        .nav-g:hover .bar04 {
+            background-color: red;
+            transform: translateY(-4px) rotate(30deg);
+            transition-duration: 0.5s, 0.5s;
+
+        }
+
+
+
+        /* *********** */
+        .bg1110 {
+            max-width: 1110px;
+            height: 4000px;
+            margin: auto;
+            /* background-color: #9E9F9F; */
+            box-shadow: 5px 5px 5px 0 gray;
+            background-image: url("./img/bg01.jpg");
+            background-attachment: fixed;
+
+
+        }
+
+        .nav-g {
+            width: 40px;
+            height: 50px;
+            position: fixed;
+            background-color: #EAB8B5;
+            right: 0px;
+            top: 150px;
+            z-index: 999;
+            border: whitesmoke 1px solid;
+            display: flex;
+            justify-content: center;
+            align-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .bar01 {
+            background-color: #EAB8B5;
+            width: 20px;
+            height: 1px;
+
+        }
+
+        .bar02 {
+            background-color: white;
+            width: 20px;
+            height: 1px;
+            position: relative;
+
+        }
+
+        .bar03 {
+            background-color: white;
+            width: 20px;
+            height: 1px;
+
+        }
+
+        .bar04 {
+            background-color: white;
+            width: 20px;
+            height: 1px;
+            position: relative;
+
+
+        }
+
+        .bar05 {
+            background-color: #EAB8B5;
+            width: 20px;
+            height: 1px;
+
+        }
+
+
+        .container-title {
+            /* padding-top: 50px; */
+            max-width: 1110px;
+            margin: auto;
+
+        }
+
+        .title-bg {
+            /* background-color: #DBDCDC;
+            width: 100%; */
+            height: 355px;
+            padding-top: 50px;
+
+        }
+
+        .title-main {
+            width: 100%;
+            height: 255px;
+            background-color: #EFDFB4;
+            display: flex;
+            margin: auto;
+        }
+
+        .title00 {
+            width: 100%;
+            height: 100%;
+            background-image: url("./img/title00.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+
+
+        .title01 {
+            width: 70%;
+            height: 100%;
+            background-image: url("./img/title01.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .title02 {
+            width: 30%;
+            height: 100%;
+            background-image: url("./img/title02.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .container-intro {
+            padding-top: 100px;
+            max-width: 1110px;
+            margin: auto;
+        }
+
+        .intro-bg {
+            background-color: #DBDCDC;
+            width: 100%;
+            height: 685px;
+            display: flex;
+        }
+
+        .intro-left {
+            width: 40%;
+            height: 100%;
+        }
+
+        .intro-main {
+            /* margin: auto; */
+            /* background-color: #EFDFB4; */
+
+            padding-top: 70px;
+            width: 80%;
+
+            height: calc(100% - 50px);
+            margin: auto;
+
+        }
+
+        .intro-logo {
+            max-width: 290px;
+            width: 100%;
+            height: 67px;
+            margin: auto;
+            margin-bottom: 40px;
+            background-image: url("./img/yahoobidlogo.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            /* background-color: whitesmoke; */
+            /* border: orangered 1px solid; */
+
+
+        }
+
+        .intro-word {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            line-height: 18pt;
+
+        }
+
+        .intro-icon {
+            margin: auto;
+            margin-top: 30px;
+
+            width: 40px;
+            height: 40px;
+            background-image: url("./img/happy.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+
+        .intro-right {
+            width: 60%;
+            height: 100%;
+            /* border: gray 1px solid; */
+            position: relative;
+
+        }
+
+        .container-goods {
+            width: 100%;
+            max-width: 1920px;
+            height: 350px;
+            /* background-color: #EAB8B5; */
+            position: absolute;
+            top: 1400px;
+        }
+
+        .goods-bg {
+            margin: auto;
+            max-width: 1110px;
+            height: 485px;
+            position: relative;
+            z-index: 8;
+            /* background-color: #EFDFB4; */
+            /* width: 100%; */
+
+        }
+
+        .goods-main {
+            width: 22.5%;
+            width: 250px;
+            height: calc(100% + 200px);
+            background-color: #EAB8B5;
+            position: relative;
+            margin: auto;
+            top: -150px;
+            text-align: center;
+            font-size: 36pt;
+            color: #3F0606;
+            padding-top: 50px;
+            background-image: url("./img/bg-good01.jpg");
+            background-size: cover;
+            /* background-size: 100%; */
+
+        }
+
+        .container-media {
+            padding-top: 950px;
+            max-width: 1110px;
+            margin: auto;
+        }
+
+        .media-bg {
+            /* width: 100%;
+            background-color: #DBDCDC; */
+            /* height: 890px; */
+            margin: auto;
+            position: relative;
+            padding-bottom: 50px;
+
+        }
+
+        .media-main {
+            /* margin: auto; */
+            /* background-color: #EFDFB4; */
+
+            position: relative;
+            /* top: -80px; */
+            margin: auto;
+            background-color: #EFDFB4;
+            width: 250px;
+            height: 120px;
+            font-size: 36pt;
+            line-height: 36pt;
+            text-align: center;
+
+        }
+
+        .media-main div {
+            width: 100%;
+            position: absolute;
+            top: calc(30% - 0px);
+        }
+
+        .media-iframe-g {
+            width: calc(100% - 10%);
+            height: calc(100% - 180px);
+            /* border: #000 1px solid; */
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .media-top {
+            width: 100%;
+            height: 45%;
+            /* border: #000 1px solid; */
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .media-bot {
+            margin-top: 7%;
+            width: 100%;
+            height: 45%;
+            /* border: #000 1px solid; */
+            display: flex;
+            justify-content: space-around;
+
+
+        }
+
+        .wash01 {
+            width: 400px;
+            height: 335px;
+            /* border: 1px red solid; */
+            background-image: url("img/wash01.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #000;
+
+
+        }
+
+        .refri01 {
+            width: 400px;
+            height: 335px;
+            /* border: 1px red solid; */
+            background-image: url("img/refri01.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #000;
+
+        }
+
+        .container-info {
+            padding-top: 200px;
+            max-width: 1110px;
+            margin: auto;
+        }
+
+        .info-bg {
+            /* width: 100%;
+            background-color: #DBDCDC; */
+            height: 570px;
+            display: flex;
+            margin: auto;
+
+        }
+
+        .info-left {
+            width: 50%;
+            height: 100%;
+            /* border: gray 1px solid; */
+            height: 540px;
+            position: relative;
+
+        }
+
+        .info-main {
+            /* background-color: #EFDFB4; */
+            /* width: 74.6%; */
+            width: 90%;
+
+            height: calc(100% - 50px);
+            position: absolute;
+            right: 12.5px;
+
+        }
+
+        .info-logo {
+            max-width: 290px;
+            width: 100%;
+            height: 67px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            background-image: url("./img/yahoobidlogo.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            /* background-color: whitesmoke; */
+        }
+
+        .info-word {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            line-height: 22pt;
+
+
+        }
+
+        .info-contact {
+            margin: auto;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            top: 70px;
+
+        }
+
+        .info-right {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 70px;
+
+        }
+
+        .info-address {
+            position: relative;
+            top: -30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-goods">
+        <div class="goods-bg">
+            <div id="loc3" class="goods-main arc"><b>卓越精選 <p>&nbsp</p>
+                    <p>&nbsp</p>
+                    <p>&nbsp</p>
+                    <p>&nbsp</p>
+                    <p>&nbsp</p>
+                    <p>更多商品</p>
+                </b></div>
+            <div class="swiper-container-goods arc main">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide ">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://ct.yimg.com/xd/api/res/1.2/11Hd.OXeG4HkL7YxqFPyAQ--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MzIwO3E9ODU7cm90YXRlPWF1dG87dz0zMjQw/https://s.yimg.com/ob/image/8af56598-886f-421a-9831-ea285bba5607.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">三洋 [310公升] 雙門 環保冰箱</h5> -->
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                <a href="#" class="btn btn-primary">三洋 [310公升] 雙門 冰箱</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://ct.yimg.com/xd/api/res/1.2/2jXNQevn2eNAFW5o4F3R6g--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MzIwO3E9ODU7cm90YXRlPWF1dG87dz0zMjQw/https://s.yimg.com/ob/image/956d733a-155c-4824-9e8a-8cad428ae4b2.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p> -->
+                                <a href="#" class="btn btn-primary">東元牌 [520公升] 三門 冰箱</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://ct.yimg.com/xd/api/res/1.2/y6018V0XWQiMQ_SGNmt1Nw--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MDk2O3E9ODU7cm90YXRlPWF1dG87dz0zMDcy/https://s.yimg.com/ob/image/90c96088-6d32-44d1-a544-d521a910b122.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p> -->
+                                <a href="#" class="btn btn-primary">東元 [480公升] DC變頻 冰箱</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://ct.yimg.com/xd/api/res/1.2/lcYMfakwVvwynLP83kWS.w--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MzIwO3E9ODU7cm90YXRlPWF1dG87dz0zMjQw/https://s.yimg.com/ob/image/ddd4ee85-1ff6-4c93-88ea-3c68d2f3ec79.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p> -->
+                                <a href="#" class="btn btn-primary">東元[14公斤] DD變頻 超音波</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://ct.yimg.com/xd/api/res/1.2/jFNAvB_Mhdluna4JInoXrg--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MzIwO3E9ODU7cm90YXRlPWF1dG87dz0zMjQw/https://s.yimg.com/ob/image/1dc54b4f-6a27-47b8-8b21-81b2951e8e6d.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p> -->
+                                <a href="#" class="btn btn-primary">LG[13公斤] DD變頻 洗衣機</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://ct.yimg.com/xd/api/res/1.2/aL4xigFOgObt.U4zF8c.lQ--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MzIwO3E9ODU7cm90YXRlPWF1dG87dz0zMjQw/https://s.yimg.com/ob/image/bb1e311b-63f3-447a-8ff4-e22a6c4bdc1c.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p> -->
+                                <a href="#" class="btn btn-primary">大同[13公斤] DD變頻 超音波</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
+
+            <!-- <div class="goods-iframe arc">
+            </div> -->
+
+        </div>
+    </div>
+    <div class="bg1110">
+        <div class="nav-g arc">
+            <div class="bar01"></div>
+            <div class="bar02"></div>
+            <div class="bar03"></div>
+            <div class="bar04"></div>
+            <div class="bar05"></div>
+            <div class="ul-g">
+                <ul>
+                    <!-- <a href="#">
+                        <li>按鈕1</li>
+                    </a> -->
+                    <a href="#loc1">
+                        <li>頁首top</li>
+                    </a>
+                    <a href="#loc2">
+                        <li>認識我們</li>
+                    </a>
+                    <a href="#loc3">
+                        <li>卓越精選</li>
+                    </a>
+                    <a href="#loc4">
+                        <li>整理維修</li>
+                    </a>
+                    <a href="#loc5">
+                        <li>聯絡資訊</li>
+                    </a>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="loc1" class="container-title">
+            <div class="title-bg arc bg">
+                <div id="scene" class="title-main arc main">
+                        <div data-depth="0.2" class="title00"></div>
+                    <!-- <div class="title01"></div>
+                    <div class="title02"></div> -->
+
+                </div>
+
+            </div>
+        </div>
+        <div id="loc2" class="container-intro">
+            <div class="intro-bg arc bg">
+                <div class="intro-left">
+                    <div id="scene1" class="intro-main arc main">
+                        <div data-depth="0.6" class="intro-logo "></div>
+
+                        <div class="intro-word">
+                            賣場已在奇摩拍賣
+                            <p></p>
+                            經營15年信譽良好
+                            <p></p>
+                            <p>&nbsp</p>
+
+                            冰箱修理後
+                            <p></p>
+                            須插電測試10天
+                            <p></p>
+                            洗衣機測試到好
+                            <p></p>
+                            才會拍照上架
+                            <p>&nbsp</p>
+                            <p></p>
+
+                            精心製作影音上傳
+                            <p></p>
+                            消費者買的更安心
+                        </div>
+                        <div class="intro-icon arc"></div>
+                    </div>
+                </div>
+                <div class="intro-right">
+                    <div class="intro-iframe">
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <iframe width="685" height="565" src="https://www.youtube.com/embed/ikJGsZO65n0"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a data-flickr-embed="true"
+                                        href="https://www.flickr.com/photos/185927564@N02/49199624107/in/dateposted-public/"
+                                        title="IMG_20191207_113434"><img
+                                            src="https://live.staticflickr.com/65535/49199624107_a6192f85da_b.jpg"
+                                            width="685" height="565" alt="IMG_20191207_113434"></a>
+                                    <script async src="//embedr.flickr.com/assets/client-code.js"
+                                        charset="utf-8"></script>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a data-flickr-embed="true"
+                                        href="https://www.flickr.com/photos/185927564@N02/49199625467/in/dateposted-public/"
+                                        title="IMG_20191207_112558"><img
+                                            src="https://live.staticflickr.com/65535/49199625467_228e833d18_b.jpg"
+                                            width="685" height="565" alt="IMG_20191207_112558"></a>
+                                    <script async src="//embedr.flickr.com/assets/client-code.js"
+                                        charset="utf-8"></script>
+                                </div>
+                            </div>
+                            <!-- ***************** -->
+                            <!-- Swiper -->
+
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-media">
+            <div class="media-bg arc bg">
+                <div id="loc4" class="media-main arc main">
+                    <div><b>整理維修</b></div>
+                </div>
+                <div class="media-iframe-g">
+                    <div class="media-top">
+
+                        <iframe width="400" height="335" src="https://www.youtube.com/embed/TvOXnC8LY0E" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                        <iframe width="400" height="335" src="https://www.youtube.com/embed/D32ZfiZ_gkw" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                    <div class="media-bot">
+                        <div class="wash01 arc">
+                        </div>
+
+                        <div class="refri01 arc">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loc5" class="container-info">
+            <div class="info-bg arc bg">
+                <div class="info-left">
+                    <div class="info-main arc main">
+                        <div class="info-logo"></div>
+                        <div class="info-word">
+                            二手商品本身爭議較大<p></p>
+                            如您是要求完美主義者<p></p>建議您就近電器行購買<p></p>&nbsp<p></p>每台商品皆為實機拍攝<p></p>如您不放心可現場選購<p></p>
+                            <p>
+                            </p>恭候大駕光臨
+                            <div class="info-contact">
+                                <b>0912-334920 吳先生
+                                </b>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="info-right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464446.7876055984!2d120.71476470165948!3d24.57226195323929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469176b605a7613%3A0x8cc0105471fc3806!2z5Y2T6LaK5LqM5omL5rSX6KGj5qmf5Yaw566x!5e0!3m2!1szh-TW!2stw!4v1576127645527!5m2!1szh-TW!2stw"
+                        width="414" height="416" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <div class="info-iframe">
+
+                    </div>
+                    <div class="info-address">
+                        <p><span>
+                                <b>
+                                    台中市潭子區中山路一段298-6
+                                </b></span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loc6" class="container-footer">
+            <div class="footer-avatar"></div>
+            <div class="footer-c"></div>
+        </div>
+    </div>
+    <!--js ************************** -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- ********** -->
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            // loop: true,
+            effect: 'cube',
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            // *********************
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true,
+            // },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <!-- ********** -->
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container-goods', {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true,
+            // },
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
+            // 
+            effect: 'coverflow',
+            grabCursor: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 10,
+                depth: 0,
+                modifier: 1,
+                // slideShadows: true,
+            },
+            //   pagination: {
+            //     el: '.swiper-pagination',
+            //   },
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
+    
+    <!-- **************** -->
+
+</body>
+
+</html>
