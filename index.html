@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -36,7 +38,6 @@
 
         .swiper-slide {
             text-align: center;
-            font-size: 18px;
             /* background-color: #C8C9C9; */
             /* Center slide text vertically */
             display: -webkit-box;
@@ -75,34 +76,52 @@
         /* ****************************** */
         html {
             scroll-behavior: smooth;
+
         }
 
 
         body {
-            width: 100%;
+            max-width: 100%;
             background: #727171;
             font-family: SimSun, Helvetica, Arial, sans-serif;
-            color: #000;
+            color: 293327;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             position: relative;
             font-size: 18pt;
-
+            background-image: url("./img/bg-body04.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
         }
 
+        a:hover {
+            text-decoration: none;
+
+        }
+
         .arc {
             border-radius: 5%;
             box-shadow: 5px 5px 5px 0 gray;
+            border: 2px solid lightgray;
+
         }
 
         iframe {
             border-radius: 5%;
             box-shadow: 5px 5px 5px 0 gray;
+            border: 3px lightgray solid;
+
+        }
+
+        iframe:hover {
+            border: tomato 3px solid;
+            transition: 0.5s;
 
         }
 
@@ -111,50 +130,52 @@
         }
 
         .main {
-            background-image: url("./img/bg-main00.jpg");
+            background-image: url("./img/bg-main01.jpg");
             background-size: cover;
             /* background-size: 100%; */
             margin: auto;
         }
 
         .bg {
-            background-image: url("./img/bg-bg02.jpg");
+            background-image: url("./img/bg-bg04.jpg");
             width: 100%;
             background-size: cover;
 
         }
 
-        /* .btn-primary{} */
+        .btn-primary {
+            font-size: 18px;
+
+        }
+
         .ul-g {
             position: relative;
         }
 
         ul {
             width: 200px;
-            height: 30vh;
             margin: 0px;
             padding: 0px;
-            /* padding-right: 40px; */
-            background-color: oldlace;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
             position: absolute;
-            top: -160px;
+            top: -185px;
             right: -1000vw;
             border-radius: 5%;
             box-shadow: 5px 5px 5px 0 gray;
             border: lightgray 3px solid;
-            background-image: url("./img/bg-main00.jpg");
+            background-image: url("./img/bg-main01.jpg");
             background-size: cover;
 
 
         }
+
         ul li {
             list-style: none;
             width: 200px;
-            /* padding: 10px; */
+            padding: 10px;
             text-align: center;
             /* margin-left: 10px; */
             background-color: oldlaceed;
@@ -217,13 +238,14 @@
 
         /* *********** */
         .bg1110 {
-            max-width: 1115px;
-            height: 4000px;
+            max-width: 1111px;
+            height: 4500px;
             margin: auto;
-            /* background-color: #9E9F9F; */
+            background-color: rgba(255, 255, 255, 0.4);
             box-shadow: 5px 5px 5px 0 gray;
-            background-image: url("./img/bg01.jpg");
-            background-attachment: fixed;
+            /* background-image: url("./img/bg01.jpg"); */
+            /* background-attachment: fixed; */
+            position: relative;
 
 
         }
@@ -234,7 +256,7 @@
             position: fixed;
             background-color: #EAB8B5;
             right: 0px;
-            top: 380px;
+            top: 335px;
             z-index: 999;
             border: whitesmoke 1px solid;
             display: flex;
@@ -300,7 +322,7 @@
         .title-main {
             width: 100%;
             height: 255px;
-            background-color: #EFDFB4;
+            /* background-color: #EFDFB4; */
             display: flex;
             margin: auto;
         }
@@ -381,6 +403,9 @@
             background-size: 100%;
             background-color: whitesmoke;
             /* border: gray 1px solid; */
+            position: relative;
+            z-index: 900;
+
 
         }
 
@@ -400,13 +425,20 @@
         .intro-icon {
             margin: auto;
             margin-top: 30px;
-
             width: 40px;
             height: 40px;
             background-image: url("./img/happy.png");
             background-size: contain;
             background-repeat: no-repeat;
             border-radius: 50%;
+            position: relative;
+            z-index: 808;
+        }
+
+        .intro-icon:hover {
+            background-image: url("./img/wink.png");
+            transition: 0.5s;
+
         }
 
 
@@ -424,7 +456,7 @@
             height: 350px;
             /* background-color: #EAB8B5; */
             position: absolute;
-            top: 2280px;
+            top: 2950px;
         }
 
         .goods-bg {
@@ -456,8 +488,12 @@
 
         }
 
-        .container-media {
+        .goods-main:hover {
+            border: tomato 3px solid;
+        }
 
+        .container-media {
+            /* padding-top: 50px; */
             max-width: 1110px;
             margin: auto;
             padding-bottom: 690px;
@@ -510,6 +546,8 @@
             /* border: #000 1px solid; */
             display: flex;
             justify-content: space-around;
+            position: relative;
+            z-index: 901;
 
         }
 
@@ -524,6 +562,13 @@
 
         }
 
+        .media-word {
+            margin: auto;
+            padding: 50px;
+            padding-bottom: 0px;
+
+        }
+
         .wash01 {
             width: 400px;
             height: 335px;
@@ -533,7 +578,15 @@
             background-repeat: no-repeat;
             background-position: center;
             background-color: #000;
+            border: 3px lightgray solid;
 
+
+        }
+
+        .wash01:hover {
+            background-image: url("img/wash02.jpg");
+            transition: 0.5s;
+            border: 3px tomato solid;
 
         }
 
@@ -546,11 +599,20 @@
             background-repeat: no-repeat;
             background-position: center;
             background-color: #000;
+            border: 3px lightgray solid;
 
         }
 
+        .refri01:hover {
+            background-image: url("img/refri02.jpg");
+            transition: 0.5s;
+            border: 3px tomato solid;
+
+        }
+
+
         .container-info {
-            padding-top: 200px;
+            padding-top: 180px;
             max-width: 1110px;
             margin: auto;
         }
@@ -598,7 +660,8 @@
             background-color: whitesmoke;
 
         }
-        .info-logo:hover{
+
+        .info-logo:hover {
             border: tomato 3px solid;
 
         }
@@ -636,19 +699,1108 @@
             position: relative;
             top: -30px;
         }
+
+        .tree-g {
+            position: relative;
+            width: 100%;
+
+        }
+
+        .branch00 {
+            background-image: url("./img/branch-00.png");
+            width: 28%;
+            height: 350px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+            position: absolute;
+            left: 0px;
+            top: 850px;
+            z-index: 800;
+
+        }
+
+        .branch01 {
+            background-image: url("./img/branch-01.png");
+            width: 30%;
+            height: 360px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+            position: absolute;
+            right: 0px;
+            top: 1550px;
+            z-index: 802;
+
+        }
+
+        .branch02 {
+            background-image: url("./img/branch-02.png");
+            width: 34%;
+            height: 380px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+
+            position: absolute;
+            left: 0px;
+            top: 2700px;
+            z-index: 803;
+
+        }
+
+        .branch03 {
+            background-image: url("./img/branch-03.png");
+            width: 36%;
+            height: 380px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            background-position: left;
+
+            right: 0px;
+            top: 3250px;
+            z-index: 805;
+
+        }
+
+        /* .top-bar-container {
+            width: 100%;
+            margin: auto;
+            border: silver 1px solid;
+
+        }
+
+        .top-bar {
+            width: 100%;
+            height: 100px;
+            border: silver 1px solid;
+        } */
+        .container-concept {
+            width: 100%;
+            padding-top: 10px;
+        }
+
+        .concept-bg {
+            width: 100%;
+            height: 591.13px;
+
+        }
+
+        .concept-pic {
+            width: 100%;
+            height: calc(100% - 0px);
+            background-image: url("./img/concept00.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .mask {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 38.2%;
+            position: absolute;
+            bottom: -100%;
+            transition: 1s;
+            padding: 50px;
+        }
+
+        .concept-pic:hover .mask {
+            bottom: 0px;
+        }
+
+        .mask span {
+            color: white;
+        }
+
+        .para-wash {
+            width: 500px;
+            position: absolute;
+            /* border: 1px red solid; */
+            right: 0px;
+
+        }
+
+        .r-wash {
+            background-image: url("./img/refri-pa.png");
+            width: 500px;
+            height: 400px;
+            /* background-size: cover; */
+            background-size: 100%;
+
+            /* border: 1px red solid; */
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+        }
+
+        .splash-g {
+            /* border: 1px tomato solid; */
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            bottom: 80px;
+            right: 180px;
+        }
+
+        .splash00 {
+            background-image: url("./img/splash00.png");
+            width: 95px;
+            height: 90px;
+            /* border: 1px red solid; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* position: absolute;
+            top: calc(50% - 40px);
+            left: calc(50% - 30px); */
+
+        }
+
+        .splash01 {
+            background-image: url("./img/splash01.png");
+            width: 95px;
+            height: 90px;
+            /* border: 1px red solid; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* position: absolute;
+            top: calc(50% - 70px);
+            left: calc(50% - 20px); */
+
+        }
+
+        @media(max-width:1210px) {
+            #swiper-button-g {
+                display: none;
+            }
+
+            .branch00 {
+                width: 28%;
+                height: 300px;
+
+            }
+
+            .branch01 {
+                width: 30%;
+                height: 310px;
+            }
+
+            .branch02 {
+                width: 34%;
+                height: 330px;
+            }
+
+            .branch03 {
+                width: 36%;
+                height: 350px;
+            }
+        }
+
+        @media(max-width:1000px) {
+            #swiper-button-g {
+                display: none;
+            }
+
+            .branch00 {
+                width: 28%;
+                height: 250px;
+            }
+
+            .branch01 {
+                width: 30%;
+                height: 260px;
+            }
+
+            .branch02 {
+                width: 34%;
+                height: 280px;
+            }
+
+            .branch03 {
+                width: 36%;
+                height: 300px;
+            }
+
+        }
+
+        @media(max-width:800px) {
+            #swiper-button-g {
+                display: none;
+            }
+
+            .branch00 {
+                width: 28%;
+                height: 200px;
+                top: 850px
+            }
+
+            .branch01 {
+                width: 30%;
+                height: 210px;
+                top: 1650px
+            }
+
+            .branch02 {
+                width: 34%;
+                height: 230px;
+                top: 2700px;
+
+            }
+
+            .branch03 {
+                width: 36%;
+                height: 250px;
+                top: 3300px;
+
+            }
+
+        }
+
+        @media(max-width:800px) {
+            #swiper-button-g {
+                display: none;
+            }
+
+            .branch00 {
+                width: 28%;
+                height: 200px;
+                top: 850px
+            }
+
+            .branch01 {
+                width: 30%;
+                height: 210px;
+                top: 1650px
+            }
+
+            .branch02 {
+                width: 34%;
+                height: 230px;
+                top: 2750px;
+
+            }
+
+            .branch03 {
+                width: 36%;
+                height: 250px;
+                top: 3300px;
+
+            }
+
+        }
+
+        /* ******************* */
+        @media(max-width:375px) {
+            .swiper-container {
+                /* width: 685px; */
+                width: 100%;
+                height: 575px;
+                margin: auto;
+                position: absolute;
+                top: calc(50% - 282.5px);
+                left: 10px;
+                /* border: tan 2px solid; */
+            }
+
+            .swiper-container-goods {
+                width: 100%;
+                height: 350px;
+                overflow: hidden;
+                margin: auto;
+                background-color: #EFDFB4;
+                position: absolute;
+                top: 0px;
+                /* padding-top: 25px; */
+
+            }
+
+            .swiper-slide {
+                text-align: center;
+                /* background-color: #C8C9C9; */
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                background-position: center;
+                background-size: cover;
+                /* background-color: #EFDFB4; */
+                border-radius: 5%;
+
+
+            }
+
+            .card {
+                border: 0px;
+                background-color: #EFDFB4;
+                background-color: unset;
+
+
+            }
+
+            .card img {
+                width: 150px;
+                margin: auto;
+            }
+
+            /* ****************************** */
+            html {
+                scroll-behavior: smooth;
+            }
+
+
+            body {
+                width: 100%;
+                max-width: 375px;
+                font-family: SimSun, Helvetica, Arial, sans-serif;
+                color: 293327;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                position: relative;
+                font-size: 18pt;
+                background-image: url("./img/bg-body04.jpg");
+                background-size: cover;
+                background-attachment: fixed;
+                /* overflow: hidden; */
+
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: none;
+
+            }
+
+            .arc {
+                border-radius: 5%;
+                box-shadow: 3px 3px 3px 0 gray;
+                border: 1px solid lightgray;
+
+            }
+
+            iframe {
+                border-radius: 5%;
+                box-shadow: 3px 3px 3px 0 gray;
+                border: 1px lightgray solid;
+
+            }
+
+            iframe:hover {
+                border: tomato 1px solid;
+                transition: 0.5s;
+
+            }
+
+            span {
+                text-align: center;
+            }
+
+            .main {
+                background-image: url("./img/bg-main01.jpg");
+                background-size: cover;
+                /* background-size: 100%; */
+                margin: auto;
+            }
+
+            .bg {
+                background-image: url("./img/bg-bg04.jpg");
+                width: 100%;
+                background-size: cover;
+
+            }
+
+            .btn-primary {
+                font-size: 14px;
+
+            }
+
+            .ul-g {
+                position: relative;
+            }
+
+            ul {
+                width: 200px;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                position: absolute;
+                top: 0px;
+                right: -1000vw;
+                border-radius: 5%;
+                box-shadow: 5px 5px 5px 0 gray;
+                border: lightgray 3px solid;
+                background-image: url("./img/bg-main01.jpg");
+                background-size: cover;
+
+
+            }
+
+            ul li {
+                list-style: none;
+                width: 200px;
+                padding: 10px;
+                text-align: center;
+                /* margin-left: 10px; */
+                background-color: oldlaceed;
+                position: relative;
+                margin: auto;
+
+            }
+
+
+            .nav-g:hover {
+                border: tomato 3px solid;
+                transition: 0.5s;
+
+            }
+
+            .nav-g:hover ul {
+                left: 0px;
+                transition: 0.8s;
+            }
+
+            .nav-g ul:hover {
+                border: tomato 3px solid;
+                transition: 0.5s;
+
+            }
+
+            .nav-g ul li:hover {
+                background-color: #EAB8B5;
+                transition: 0.5s;
+
+
+
+            }
+
+            .nav-g:hover .bar02 {
+                background-color: tomato;
+
+                transform: translateY(4px) rotate(-30deg);
+
+                transition-duration: 0.5s, 0.5s;
+
+            }
+
+            .nav-g:hover .bar03 {
+                background-color: tomato;
+                transform: rotate(-30deg);
+                transform: translateX(2px);
+                transition-duration: 0.5s, 0.5s;
+
+            }
+
+            .nav-g:hover .bar04 {
+                background-color: tomato;
+                transform: translateY(-4px) rotate(30deg);
+                transition-duration: 0.5s, 0.5s;
+
+            }
+
+
+
+            /* *********** */
+            .bg1110 {
+                max-width: 375px;
+                height: 4500px;
+                margin: auto;
+                background-color: rgba(255, 255, 255, 0.4);
+                box-shadow: 5px 5px 5px 0 gray;
+                /* background-image: url("./img/bg01.jpg"); */
+                /* background-attachment: fixed; */
+                position: relative;
+
+
+            }
+
+            .nav-g {
+                width: 40px;
+                height: 50px;
+                position: fixed;
+                background-color: #EAB8B5;
+                left: 0px;
+                top: 0px;
+                z-index: 999;
+                border: whitesmoke 1px solid;
+                display: flex;
+                justify-content: center;
+                align-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            .bar01 {
+                background-color: #EAB8B5;
+                width: 20px;
+                height: 1px;
+
+            }
+
+            .bar02 {
+                background-color: white;
+                width: 20px;
+                height: 1px;
+                position: relative;
+
+            }
+
+            .bar03 {
+                background-color: white;
+                width: 20px;
+                height: 1px;
+
+            }
+
+            .bar04 {
+                background-color: white;
+                width: 20px;
+                height: 1px;
+                position: relative;
+
+
+            }
+
+            .bar05 {
+                background-color: #EAB8B5;
+                width: 20px;
+                height: 1px;
+
+            }
+
+
+            .container-title {
+                /* padding-top: 50px; */
+                max-width: 375px;
+                margin: auto;
+
+            }
+
+            .title-bg {
+                width: 100%;
+                height: 205px;
+                padding-top: 25px;
+
+
+            }
+
+            .title-main {
+                width: 100%;
+                height: 155px;
+                /* background-color: #EFDFB4; */
+                display: flex;
+                margin: auto;
+            }
+
+            .title00 {
+                width: 100%;
+                height: 100%;
+                background-image: url("./img/title00.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+            }
+
+
+
+            .container-intro {
+                padding-top: 100px;
+                max-width: 1110px;
+                margin: auto;
+                padding-bottom: 50px;
+
+            }
+
+            .intro-bg {
+                background-color: #DBDCDC;
+                width: 100%;
+                /* height: 685px; */
+                display: block;
+            }
+
+            .intro-left {
+                width: 100%;
+                height: 100%;
+            }
+
+            .intro-main {
+                /* margin: auto; */
+                /* background-color: #EFDFB4; */
+
+                padding-top: 70px;
+                width: 90%;
+
+                height: calc(100% - 0px);
+                margin: auto;
+
+            }
+
+            .intro-logo {
+                /* max-width: 290px; */
+                width: 100%;
+                height: 67px;
+                margin: auto;
+                margin-bottom: 40px;
+                background-image: url("./img/yahoobidlogo.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                background-color: whitesmoke;
+                /* border: gray 1px solid; */
+                position: relative;
+                z-index: 900;
+
+
+            }
+
+            .intro-logo:hover {
+                border: tomato 3px solid;
+
+            }
+
+            .intro-word {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                line-height: 18pt;
+
+            }
+
+            .intro-icon {
+                margin: auto;
+                margin-top: 30px;
+                width: 40px;
+                height: 40px;
+                background-image: url("./img/happy.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                position: relative;
+                z-index: 808;
+            }
+
+            .intro-icon:hover {
+                background-image: url("./img/wink.png");
+                transition: 0.5s;
+
+            }
+
+
+            .intro-right {
+                width: 100%;
+                height: 100%;
+                /* border: gray 1px solid; */
+                position: relative;
+
+            }
+
+            .container-goods {
+                width: 700px;
+                height: 350px;
+                /* background-color: #EAB8B5; */
+                position: absolute;
+                top: 3450px;
+                left: -150px
+            }
+
+            .goods-bg {
+                margin: auto;
+                max-width: 1110px;
+                height: 485px;
+                position: relative;
+                z-index: 8;
+                /* background-color: #EFDFB4; */
+                /* width: 100%; */
+
+            }
+
+            .goods-main {
+                width: 22.5%;
+                width: 250px;
+                height: calc(100% + 200px);
+                background-color: #EAB8B5;
+                position: relative;
+                margin: auto;
+                top: -150px;
+                text-align: center;
+                font-size: 36pt;
+                color: #3F0606;
+                padding-top: 50px;
+                background-image: url("./img/bg-good01.jpg");
+                background-size: cover;
+                /* background-size: 100%; */
+
+            }
+
+            .goods-main:hover {
+                border: tomato 3px solid;
+            }
+
+            .container-media {
+                padding-top: 550px;
+                max-width: 1110px;
+                margin: auto;
+                padding-bottom: 690px;
+            }
+
+            .media-bg {
+                /* width: 100%;
+            background-color: #DBDCDC; */
+                /* height: 890px; */
+                margin: auto;
+                position: relative;
+                padding-bottom: 50px;
+                padding-top: 50px;
+
+            }
+
+            .media-main {
+                /* margin: auto; */
+                /* background-color: #EFDFB4; */
+
+                position: relative;
+                /* top: -80px; */
+                margin: auto;
+                background-color: #EFDFB4;
+                width: 250px;
+                /* height: 120px; */
+                font-size: 36pt;
+                line-height: 36pt;
+                text-align: center;
+
+            }
+
+            /* .media-main{
+            width: 100%;
+            position: absolute;
+            top: calc(30% - 0px);
+        } */
+
+            .media-iframe-g {
+                width: calc(100% - 10%);
+                height: calc(100% - 180px);
+                /* border: #000 1px solid; */
+                margin: auto;
+                /* margin-top: 50px; */
+            }
+
+            .media-top {
+                width: 100%;
+                height: 45%;
+                /* border: #000 1px solid; */
+                display: flex;
+                justify-content: space-around;
+                position: relative;
+                z-index: 901;
+
+            }
+
+            .media-bot {
+                margin-top: 7%;
+                width: 100%;
+                height: 45%;
+                /* border: #000 1px solid; */
+                display: flex;
+                justify-content: space-around;
+
+
+            }
+
+            .media-word {
+                margin: auto;
+                padding: 50px;
+                padding-bottom: 0px;
+
+            }
+
+            .wash01 {
+                width: 400px;
+                height: 335px;
+                /* border: 1px red solid; */
+                background-image: url("img/wash01.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #000;
+                border: 3px lightgray solid;
+
+
+            }
+
+            .wash01:hover {
+                background-image: url("img/wash02.jpg");
+                transition: 0.5s;
+                border: 3px tomato solid;
+
+            }
+
+            .refri01 {
+                width: 400px;
+                height: 335px;
+                /* border: 1px red solid; */
+                background-image: url("img/refri01.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #000;
+                border: 3px lightgray solid;
+
+            }
+
+            .refri01:hover {
+                background-image: url("img/refri02.jpg");
+                transition: 0.5s;
+                border: 3px tomato solid;
+
+            }
+
+
+            .container-info {
+                padding-top: 180px;
+                max-width: 1110px;
+                margin: auto;
+            }
+
+            .info-bg {
+                /* width: 100%;
+            background-color: #DBDCDC; */
+
+                /* height: 570px; */
+                display: block;
+                margin: auto;
+
+            }
+
+            .info-left {
+                width: 100%;
+                height: 100%;
+                /* border: gray 1px solid; */
+                height: 540px;
+                position: relative;
+
+            }
+
+            .info-main {
+                /* background-color: #EFDFB4; */
+                /* width: 74.6%; */
+                width: 90%;
+
+                height: calc(100% - 50px);
+                position: absolute;
+                right: 12.5px;
+
+            }
+
+            .info-logo {
+                max-width: 290px;
+                width: 100%;
+                height: 67px;
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 30px;
+                background-image: url("./img/yahoobidlogo.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                background-color: whitesmoke;
+
+            }
+
+            .info-logo:hover {
+                border: tomato 3px solid;
+
+            }
+
+            .info-word {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                line-height: 22pt;
+
+
+            }
+
+            .info-contact {
+                margin: auto;
+                text-align: center;
+                width: 100%;
+                position: relative;
+                top: 70px;
+
+            }
+
+            .info-right {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 70px;
+
+            }
+
+            .info-address {
+                position: relative;
+                top: -30px;
+            }
+
+            .tree-g {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+            }
+
+
+            .container-concept {
+                width: 100%;
+                padding-top: 10px;
+            }
+
+            .concept-bg {
+                width: 100%;
+                height: 591.13px;
+
+            }
+
+            .concept-pic {
+                width: 100%;
+                height: 591.13px;
+                background-image: url("./img/concept00.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: unset;
+                /* overflow: hidden; */
+                position: relative;
+
+            }
+
+            .mask {
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                height: 38.2%;
+                position: absolute;
+                bottom: -100%;
+                transition: 1s;
+                padding: 10px;
+            }
+
+            .concept-pic:hover .mask {
+                bottom: 0px;
+            }
+
+            .mask span {
+                color: white;
+            }
+
+            .para-wash {
+                width: 500px;
+                position: absolute;
+                /* border: 1px red solid; */
+                right: 0px;
+
+            }
+
+            .r-wash {
+                background-image: url("./img/refri-pa.png");
+                width: 500px;
+                height: 400px;
+                /* background-size: cover; */
+                background-size: 100%;
+
+                /* border: 1px red solid; */
+                background-repeat: no-repeat;
+                background-position: center;
+
+
+            }
+
+            .para-wash {
+                display: none;
+            }
+
+            .splash-g {
+                display: none;
+            }
+
+
+            #swiper-button-g {
+                display: none;
+            }
+
+            .branch00 {
+                width: 28%;
+                height: 200px;
+                top: 550px
+            }
+
+            .branch01 {
+                width: 30%;
+                height: 210px;
+                top: 1650px
+            }
+
+            .branch02 {
+                width: 34%;
+                height: 230px;
+                top: 2750px;
+
+            }
+
+            .branch03 {
+                width: 36%;
+                height: 250px;
+                top: 3300px;
+
+            }
+
+        }
     </style>
 </head>
 
 <body>
+
+    <div class="tree-g">
+        <div class="branch00" data-aos="fade-up-right"></div>
+        <div class="branch01" data-aos="fade-up-left"></div>
+        <div id="loc4" class="branch02" data-aos="fade-up-right"></div>
+        <div class="branch03" data-aos="fade-up-left"></div>
+    </div>
     <div class="container-goods">
         <div class="goods-bg">
-            <div id="loc3" class="goods-main arc"><b>卓越精選 <p>&nbsp</p>
-                    <p>&nbsp</p>
-                    <p>&nbsp</p>
-                    <p>&nbsp</p>
-                    <p>&nbsp</p>
-                    <p>更多商品</p>
-                </b></div>
+            <a href="https://tw.bid.yahoo.com/booth/Y3340468257?bfe=1">
+                <div class="goods-main arc"><b>卓越精選 <p>&nbsp</p>
+                        <p>&nbsp</p>
+                        <p>&nbsp</p>
+                        <p>&nbsp</p>
+                        <p>&nbsp</p>
+                        <p>更多商品</p>
+                    </b></div>
+            </a>
             <div class="swiper-container-goods arc main">
                 <div class="swiper-wrapper ">
                     <div class="swiper-slide ">
@@ -658,7 +1810,8 @@
                             <div class="card-body">
                                 <!-- <h5 class="card-title">三洋 [310公升] 雙門 環保冰箱</h5> -->
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                                <a href="#" class="btn btn-primary">三洋 [310公升] 雙門 冰箱</a>
+                                <a href="https://tw.bid.yahoo.com/booth/Y3340468257?bfe=1"
+                                    class="btn btn-primary">三洋[310公升] 雙門冰箱</a>
                             </div>
                         </div>
                     </div>
@@ -670,7 +1823,8 @@
                                 <!-- <h5 class="card-title">Card title</h5> -->
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                                     the card's content.</p> -->
-                                <a href="#" class="btn btn-primary">東元牌 [520公升] 三門 冰箱</a>
+                                <a href="https://tw.bid.yahoo.com/item/%E4%BA%8C%E6%89%8B%E6%B4%97%E8%A1%A3%E6%A9%9F-%E5%86%B0%E7%AE%B1-%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%9C%80%E4%BD%8E%E5%83%B9-%E5%93%81%E9%A0%85%E6%9C%80%E6%BC%82%E4%BA%AE-%E6%9D%B1%E5%85%83%E7%89%8C-5-100594595239"
+                                    class="btn btn-primary">東元 [520公升] 三門冰箱</a>
                             </div>
                         </div>
                     </div>
@@ -682,7 +1836,8 @@
                                 <!-- <h5 class="card-title">Card title</h5> -->
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                                     the card's content.</p> -->
-                                <a href="#" class="btn btn-primary">東元 [480公升] DC變頻 冰箱</a>
+                                <a href="https://tw.bid.yahoo.com/item/%E4%BA%8C%E6%89%8B%E6%B4%97%E8%A1%A3%E6%A9%9F-%E5%86%B0%E7%AE%B1-%E5%8F%B0%E4%B8%AD%E6%9C%80%E4%BD%8E%E5%83%B9-%E5%B1%A4%E6%9D%BF-%E7%93%B6%E6%9E%B6%E6%9C%80%E9%BD%8A%E5%85%A8-%E6%9D%B1%E5%85%83-100386857128"
+                                    class="btn btn-primary">東元 [480公升] DC變頻</a>
                             </div>
                         </div>
                     </div>
@@ -694,7 +1849,8 @@
                                 <!-- <h5 class="card-title">Card title</h5> -->
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                                     the card's content.</p> -->
-                                <a href="#" class="btn btn-primary">東元[14公斤] DD變頻 超音波</a>
+                                <a href="https://tw.bid.yahoo.com/item/%E4%BA%8C%E6%89%8B%E6%B4%97%E8%A1%A3%E6%A9%9F-%E5%86%B0%E7%AE%B1-%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%9C%80%E4%BD%8E%E5%83%B9-%E6%9D%B1%E5%85%83-14%E5%85%AC%E6%96%A4-DD%E8%AE%8A%E9%A0%BB-100504921473"
+                                    class="btn btn-primary">東元 [14公斤] DD變頻 超音波</a>
                             </div>
                         </div>
                     </div>
@@ -706,7 +1862,8 @@
                                 <!-- <h5 class="card-title">Card title</h5> -->
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                                     the card's content.</p> -->
-                                <a href="#" class="btn btn-primary">LG[13公斤] DD變頻 洗衣機</a>
+                                <a href="https://tw.bid.yahoo.com/item/%E4%BA%8C%E6%89%8B%E6%B4%97%E8%A1%A3%E6%A9%9F-%E5%86%B0%E7%AE%B1-%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%9C%80%E4%BD%8E%E5%83%B9-LG-13%E5%85%AC%E6%96%A4-DD%E8%AE%8A%E9%A0%BB-100666611830"
+                                    class="btn btn-primary">LG [13公斤] DD變頻</a>
                             </div>
                         </div>
                     </div>
@@ -718,14 +1875,15 @@
                                 <!-- <h5 class="card-title">Card title</h5> -->
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                                     the card's content.</p> -->
-                                <a href="#" class="btn btn-primary">大同[13公斤] DD變頻 超音波</a>
+                                <a href="https://tw.bid.yahoo.com/item/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%9C%80%E4%BD%8E%E5%83%B9-%E5%A4%A7%E5%90%8C-13%E5%85%AC%E6%96%A4-DD%E8%AE%8A%E9%A0%BB-%E8%B6%85%E9%9F%B3%E6%B3%A2-%E4%B8%8D%E9%8F%BD%E9%8B%BC-100673080049"
+                                    class="btn btn-primary">大同 [13公斤] DD變頻 超音波</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div id="swiper-button-g" class="swiper-pagination"></div>
+                <div id="swiper-button-g" class="swiper-button-next"></div>
+                <div id="swiper-button-g" class="swiper-button-prev"></div>
             </div>
 
             <!-- <div class="goods-iframe arc">
@@ -734,6 +1892,32 @@
         </div>
     </div>
     <div class="bg1110">
+        <!-- <div class="top-bar-container">
+            <div class="top-bar">
+                <ul>
+                    <a href="#loc1">
+                        <li>頁首top</li>
+                    </a>
+                    <a href="#loc2">
+                        <li>店面環境</li>
+                    </a>
+                    <a href="#loc3">
+                        <li>整理維修</li>
+                    </a>
+    
+                    <a href="#loc4">
+                        <li>卓越精選</li>
+                    </a>
+    
+                    <a href="#loc5">
+                        <li>聯絡資訊</li>
+                    </a>
+    
+                </ul>
+    
+            </div>
+        </div> -->
+
         <div class="nav-g arc">
             <div class="bar01"></div>
             <div class="bar02"></div>
@@ -746,18 +1930,23 @@
                         <li>按鈕1</li>
                     </a> -->
                     <a href="#loc1">
-                        <li>頁首top</li>
+                        <li>頁首Top</li>
                     </a>
+                    <a href="#loc1.5">
+                        <li>卓越精神</li>
+                    </a>
+
                     <a href="#loc2">
                         <li>店面環境</li>
                     </a>
-                    <a href="#loc4">
+                    <a href="#loc3">
                         <li>整理維修</li>
                     </a>
 
-                    <a href="#loc3">
-                        <li>卓越精選</li>
+                    <a href="#loc4">
+                        <li>越境精品</li>
                     </a>
+
                     <a href="#loc5">
                         <li>聯絡資訊</li>
                     </a>
@@ -768,14 +1957,24 @@
         </div>
 
         <div id="loc1" class="container-title">
-            <div class="title-bg arc bg">
-                <div id="scene" class="title-main arc main">
+            <div class="title-bg arc ">
+                <div id="scene" class="title-main arc bg">
                     <div data-depth="0.2" class="title00"></div>
                     <!-- <div class="title01"></div>
                     <div class="title02"></div> -->
 
                 </div>
 
+            </div>
+        </div>
+        <div id="loc1.5" class="container-concept">
+            <div class="concept-bg bg arc ">
+                <div class="concept-pic arc ">
+                    <div class="mask">
+                        <span>一直以來都秉持愛物惜物的精神在做生意，總希望每件商品都能繼續延續生命.畢竟每台冰箱或洗衣機從製造、運送、維修到您手上，是經過幾百人的努力才完成，怎能輕易放棄!</span>
+                    </div>
+
+                </div>
             </div>
         </div>
         <div id="loc2" class="container-intro">
@@ -820,6 +2019,15 @@
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                 </div>
+                                <div class="swiper-slide">
+                                    <a data-flickr-embed="true"
+                                        href="https://www.flickr.com/photos/185927564@N02/49199624662/in/photostream/"
+                                        title="IMG_20191207_113311_1"><img
+                                            src="https://live.staticflickr.com/65535/49199624662_ce47118a8b_b.jpg"
+                                            width="685" height="565" alt="IMG_20191207_113311_1"></a>
+                                    <script async src="//embedr.flickr.com/assets/client-code.js"
+                                        charset="utf-8"></script>
+                                </div>
 
                                 <div class="swiper-slide">
                                     <a data-flickr-embed="true"
@@ -840,6 +2048,7 @@
                                     <script async src="//embedr.flickr.com/assets/client-code.js"
                                         charset="utf-8"></script>
                                 </div>
+
                             </div>
                             <!-- ***************** -->
                             <!-- Swiper -->
@@ -853,7 +2062,7 @@
                 </div>
             </div>
         </div>
-        <div id="loc4" class="container-media">
+        <div id="loc3" class="container-media">
             <div class="media-bg arc bg">
                 <div class="media-main arc main">
                     <!-- <div><b>整理維修</b></div> -->
@@ -861,11 +2070,11 @@
                 <div class="media-iframe-g">
                     <div class="media-top">
 
-                        <iframe width="400" height="335" src="https://www.youtube.com/embed/TvOXnC8LY0E" frameborder="0"
+                        <iframe width="50%" height="335" src="https://www.youtube.com/embed/TvOXnC8LY0E" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
 
-                        <iframe width="400" height="335" src="https://www.youtube.com/embed/D32ZfiZ_gkw" frameborder="0"
+                        <iframe width="50%" height="335" src="https://www.youtube.com/embed/D32ZfiZ_gkw" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
 
@@ -876,6 +2085,10 @@
 
                         <div class="refri01 arc">
                         </div>
+
+                    </div>
+                    <div class="media-word">
+                        於本店購買，享有到貨<b>90</b>天內的非人為因素保固期。期限過後如有故障，可致電直屬公司服務站，到府有償服務維修。
 
                     </div>
                 </div>
@@ -922,6 +2135,14 @@
                 </div>
             </div>
         </div>
+        <div id="scene1" class="para-wash">
+            <div data-depth="0.2" class="r-wash"></div>
+        </div>
+        <div id="scene2" class="splash-g">
+            <div data-depth="0.5" class="splash00"></div>
+            <div data-depth="0.8" class="splash01"></div>
+
+        </div>
 
         <div id="loc6" class="container-footer">
             <div class="footer-avatar"></div>
@@ -940,11 +2161,23 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <!-- ********** -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // $(function () {
+        //     AOS.init({
+        //         offset: 200,
+        //         easing: 'ease-in-sine',
+        //         mirror: false,
+        //     });
+        // })
+    </script>
+    <!-- ********** -->
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
-            // loop: true,
+            loop: true,
             effect: 'cube',
             grabCursor: true,
             cubeEffect: {
@@ -1002,13 +2235,23 @@
             //   },
         });
     </script>
+    <!-- ****** -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script>
         var scene = document.getElementById('scene');
         var parallaxInstance = new Parallax(scene);
     </script>
-
     <!-- **************** -->
+    <script>
+        var scene1 = document.getElementById('scene1');
+        var parallaxInstance = new Parallax(scene1);
+    </script>
+    <!-- **** -->
+    <script>
+        var scene2 = document.getElementById('scene2');
+        var parallaxInstance = new Parallax(scene2);
+    </script>
+
 </body>
 
 </html>
